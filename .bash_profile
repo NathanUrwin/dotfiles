@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # -*- coding: utf8 -*-
+[[ "$TRACE" ]] && set -x
+set -eo pipefail
 
 # shellcheck disable=SC1090
 source ~/miniconda3/etc/profile.d/conda.sh
