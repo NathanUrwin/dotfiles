@@ -7,3 +7,7 @@ My local configuration files saved here for convenience.
 - .bash_profile
 - .editorconfig
 - .gitignore
+
+## Extra
+
+See [PROJECTS](PROJECTS.md)
