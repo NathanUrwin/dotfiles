@@ -1,6 +1,6 @@
 # Projects
 
-The list of all my past, present, and future projects.
+List of all past and present projects I've contributed to, as well as possible future projects.
 
 ## Table of Contents
 
@@ -48,18 +48,15 @@ The list of all my past, present, and future projects.
       - [ ] TODO: Install Python 3.5.x
       - [ ] TODO: Install Python 3.6.x
       - [ ] TODO: Install Python 3.7.x
-      - [ ] TODO: Insert **pgs-root-ca.pem** into Python Venv OpenSSL CA Bundle
-      - [ ] TODO: Insert **pgs-root-ca.pem** into Python Venv Certifi CA Bundle
+      - [ ] TODO: Insert **pgs-root-ca.pem** into Python Venv OpenSSL CA Bundle?
+      - [ ] TODO: Insert **pgs-root-ca.pem** into Python Venv Certifi CA Bundle?
     - [x] Install [nvm](https://github.com/creationix/nvm)
       - [ ] TODO: Add to **~/.bash_profile**
-      - [ ] TODO: Install Node.js 4.x.x (Argon)
-      - [ ] TODO: Install Node.js 6.x.x (Boron)
-      - [ ] TODO: Install Node.js 8.x.x (Carbon)
-      - [ ] TODO: Install Node.js 10.x.x (Dubnium)
+      - [ ] TODO: Install Node.js 10.x.x (Dubnium) (Latest LTS)
     - [ ] TODO: Install [jabba](https://github.com/shyiko/jabba)
-    - [ ] TODO: Install [Liferay](https://www.liferay.com/) (with [Apache Tomcat](http://tomcat.apache.org/))
     - [ ] TODO: Install [Eclipse IDE](https://www.eclipse.org/ide/) (with [Liferay IDE](https://dev.liferay.com/de/develop/tutorials/-/knowledge_base/7-0/installing-liferay-ide))
-    - [ ] TODO: Install [FastX](https://www.starnet.com/fastx/)
+    - [ ] TODO: Install [Liferay](https://www.liferay.com/) (with [Apache Tomcat](http://tomcat.apache.org/)) (Intranet endpoint?)
+    - [ ] TODO: Install [FastX](https://www.starnet.com/fastx/) (Intranet endpoint?)
     - [x] Verify VirtualBox install
     - [x] Verify Vagrant install
     - [ ] TODO: Verify Slack install
@@ -83,7 +80,6 @@ The list of all my past, present, and future projects.
         - [Hadolint](http://hadolint.lukasmartinelli.ch/)
         - [Markdownlint](https://github.com/markdownlint/markdownlint)
         - [Ansible-linter](https://github.com/ansible/ansible-lint)
-
   - [x] **site.yml** playbook for production server deployment
     - [ ] Target [Ubuntu 18](https://www.ubuntu.com/)
     - [x] Target [CentOS 7](https://www.centos.org/)
@@ -96,24 +92,78 @@ The list of all my past, present, and future projects.
     - [x] Include [SpDird](https://lgitlab.lon.compute.pgs.com/louis/sdmPythonWrapper/tree/master/services/sdmCreateDir) playbook/role
     - [x] Include [Stern](https://lgitlab.lon.compute.pgs.com/kevin/stern) playbook/role
     - [x] Include [Wharf](https://lgitlab.lon.compute.pgs.com/wharf_group/wharf) playbook/role
-    - [ ] TODO: Include [Stern GeoNet](https://lgitlab.lon.compute.pgs.com/kevin/stern/tree/master/pgs/geonet) playbook/role (`stern-geonet.yml`?)
-    - [ ] TODO: Include Liferay playbook/role (`liferay.yml`?)
+    - [ ] TODO: Include [Stern GeoNet](https://lgitlab.lon.compute.pgs.com/kevin/stern/tree/master/pgs/geonet) playbook/role (`stern-geonet.yml`)
+    - [ ] TODO: Include Liferay playbook/role (`liferay.yml`)
+    - [ ] TODO: Include Elasticsearch Canvas (`elastic-canvas.yml`)
 - [ ] [Integrate Vagrant virtual machines for production server testing](https://techissue.pgs.com/browse/CIKILDE-176) (-> Integrate Vagrant virtual machines for local functional testing)*
   - [ ] Add [pytest](https://docs.pytest.org/en/latest/), [molecule](https://github.com/ansible/molecule), [goss](https://github.com/aelsabbahy/goss), [tox](https://github.com/tox-dev/tox) tests
   - [ ] **src.yml** playbook for installing codebases
   - [ ] **vm.yml** playbook for virtual machine setup
+- [ ] Write failing tests for test-driven development
+- [ ] Write passing tests with 70% code coverage goal
+- [ ] Evaluate/integrate [code quality/static code analysis](https://docs.gitlab.com/ce/ci/examples/code_quality.html) tools
 - [ ] Add user and developer documentation; Comment code
+- [ ] Write grade "A" tests with 90% code coverage goal
+- [ ] Add pyenv/pipenv support
+- [ ] Implement automated [semantic versioning](https://semver.org/) with [bumpversion](https://developer.atlassian.com/blog/2016/02/bumpversion-is-automation-for-semantic-versioning/)
+- Audit PGS systems IT security
+  - HTTPS all PGS sites (certbot DNS method)
+    - [Mozilla Observatory](https://observatory.mozilla.org/)
+  - Run web linting tools
+    - [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+    - [Webhint (Microsoft sonarwhal)](https://webhint.io/)
+    - [GitLab CI DAST](https://docs.gitlab.com/ce/ci/examples/dast.html) (Dynamic Application Security Testing)
+  - Run IT hardening tools
+    - [GitLab CI Container Scanning](https://docs.gitlab.com/ce/ci/examples/container_scanning.html)
+    - [Lynis system hardening compliance tester](https://cisofy.com/lynis/)
+- Migrate all remote repos to GitLab (including Imaging)
+  - Convert all version control systems (VCS) to Git
+  - For pipeline automation (i.e. Martina's Modules)
+- Migrate software architectures to REST (FUTURE: GraphQL)
+  - Uniform-Layered-Client-Cache-Stateless-Server
+- Software engineering best practices (CI QA)
+  - Integrate programming language linters
+  - Add unit and functional/integration tests
+  - Participate in test-driven development
+  - Implement continuous integration pipelines
+  - Use software project template (cookiecutter-pgs)
+  - Use repo issues and change log generator
+- More open and easily accessible intranet
+  - Global systems list (already exists?)
+  - Better gateway (CI gateway?)
+  - Better sitemaps (user sites)
+    - Sharepoint
+    - Kilde
+  - Better web design
+    - Uniform Style (Guide?) (Material Design?)
+    - Service workers (offline caching)
+    - Responsive (mobile support)
+- More interconnection between platforms (JIRA, Confluence, and GitLab)
+  - Propagate issues from GitLab to JIRA (change log automation)
+  - Build GitLab markdown documentation into Confluence pages
+- Restrict creating groups on GitLab
+  - Move CI projects to corresponding namespace
 
 ### [SDM Tools: Python interface for SDM](https://techissue.pgs.com/browse/CIKILDE-136)
 
 - [x] [Refactoring code base to be pylint and flake-8 compliant.](https://techissue.pgs.com/browse/CIKILDE-168) (-> Refactor codebase to be pylint and flake8 compliant)*
+- [ ] Evalute SDM architecture and reorganize codebases for best practices
+  - Separation of concerns between [sdmPythonWrapper](https://lgitlab.lon.compute.pgs.com/louis/sdmPythonWrapper) business logic and CLI
+  - Merge [wharfDaemonize](https://lgitlab.lon.compute.pgs.com/wharf_group/wharfDaemonize) and [wharfMQ](https://lgitlab.lon.compute.pgs.com/wharf_group/wharfMQ) back into [wharf_group/wharf](https://lgitlab.lon.compute.pgs.com/wharf_group/wharf)?
+  - Use [environment variables for configuration](https://12factor.net/config) (deprecate [wharfConfig](https://lgitlab.lon.compute.pgs.com/wharf_group/wharfConfig)?)
 - [ ] [Write Failing unit tests for every module and class for test-driven development](https://techissue.pgs.com/browse/CIKILDE-169) (-> Write failing tests for test-driven development)*
+  - [ ] Add [pytest](https://docs.pytest.org/en/latest/) and [tox](https://github.com/tox-dev/tox) tests
 - [ ] [Write Passing tests with at least 70% code coverage](https://techissue.pgs.com/browse/CIKILDE-204) (-> Write passing tests with 70% code coverage goal)*
-- [ ] Integrate (Evaluate?) code quality and static code analysis tools
+- [ ] Add pyenv/pipenv support
+- [ ] Evaluate/integrate [code quality/static code analysis](https://docs.gitlab.com/ce/ci/examples/code_quality.html) tools
 - [ ] Add user and developer documentation; Comment code
+- [ ] Write grade "A" tests with 90% code coverage goal
+- [ ] Implement automated [semantic versioning](https://semver.org/) with [bumpversion](https://developer.atlassian.com/blog/2016/02/bumpversion-is-automation-for-semantic-versioning/)
 
 ## Past
 
+- [nathanurwin/cookiecutter-pgs](https://lgitlab.lon.compute.pgs.com/nathanurwin/cookiecutter-pgs)
+- [nathanurwin/cookiecutter-pgs-demo](https://lgitlab.lon.compute.pgs.com/nathanurwin/cookiecutter-pgs-demo)
 - [nathanurwin/liferay-dev](https://lgitlab.lon.compute.pgs.com/nathanurwin/liferay-dev) -> TODO: Add to `louis/ansible` as playbook/role
 
 ## Present
@@ -130,8 +180,8 @@ The list of all my past, present, and future projects.
 - [iris/iris](https://lgitlab.lon.compute.pgs.com/iris/iris) (-> iris/iris-backend?)
 - [iris/iris-frontend](https://lgitlab.lon.compute.pgs.com/iris/iris-frontend)?
 - sdm/pytsm?
-- nathanurwin/cookiecutter-pgs?
 
 ## Snippets
 
 - [container-setup.sh](https://lgitlab.lon.compute.pgs.com/snippets/3)
+- [test_ssl.py](https://lgitlab.lon.compute.pgs.com/snippets/4)
