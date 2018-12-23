@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 # -*- coding: utf8 -*-
 
+alias clear-all="clear && printf '\e[3J'"
+alias dir="ls -HAl"
+alias docker-rm="docker rm \$(docker ps -a | grep 'Exited' | awk '{print \$1}' | xargs)"  # shellcheck disable=SC2142
+alias docker-rmi="docker rmi -f \$(docker images -f 'dangling=true' -q)"
+alias liferay="cd ~/Applications/liferay*/tom*/bin"
 alias work="cd ~/Projects && tree -d -L 2"
 alias work\?="cd ~/Projects && uncommitted -nus *"
-alias dir="ls -HAl"
-alias docker-rmi="docker rmi -f \$(docker images -f 'dangling=true' -q)"
-alias docker-rm="docker rm \$(docker ps -a | grep 'Exited' | awk '{print \$1}' | xargs)"  # shellcheck disable=SC2142
-alias liferay="cd ~/Applications/liferay*/tom*/bin"
 
 export PS1="\\u@\\h:\\w\$ "
 
@@ -30,13 +31,14 @@ NVM_DIR="$(brew --prefix nvm)"
 source "$NVM_DIR/nvm.sh"
 nvm use --delete-prefix lts/dubnium
 
-# pyenv
+# python
 export PYENV_ROOT
 PYENV_ROOT="$(brew --prefix pyenv)"
 if [[ ! "$PATH" =~ "$PYENV_ROOT/bin" ]]; then
 	export PATH="$PYENV_ROOT/bin:$PATH"
 fi
 eval "$(pyenv init -)"
+export REQUESTS_CA_BUNDLE="/usr/local/etc/openssl/cert.pem"
 
 # java
 export JAVA_HOME="$HOME/.jabba/jdk/zulu@1.8.121/Contents/Home"
