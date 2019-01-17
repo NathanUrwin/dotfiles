@@ -6,6 +6,7 @@ alias dir="ls -HAl"
 alias docker-rm="docker rm \$(docker ps -a | grep 'Exited' | awk '{print \$1}' | xargs)"  # shellcheck disable=SC2142
 alias docker-rmi="docker rmi -f \$(docker images -f 'dangling=true' -q)"
 alias liferay="cd ~/Applications/liferay*/tom*/bin"
+alias vms="vboxmanage list runningvms"
 alias work="cd ~/Projects && tree -d -L 2"
 alias work\?="cd ~/Projects && uncommitted -nus *"
 
