@@ -8,7 +8,7 @@ alias docker-rmi="docker rmi -f \$(docker images -f 'dangling=true' -q)"
 alias liferay="cd ~/Applications/liferay*/tom*/bin"
 alias vms="vboxmanage list runningvms"
 alias work="cd ~/Projects && tree -d -L 2"
-alias work\?="cd ~/Projects && uncommitted -nus *"
+alias work\?="cd ~/Projects && uncommitted -nus * -I louis/sdmPythonWrapper/src/pysdm/lib"
 
 export PS1="\\u@\\h:\\w\$ "
 
@@ -54,6 +54,6 @@ if [[ ! "$PATH" =~ "$CODE_BIN" ]]; then
 fi
 
 # .gitignore
-gi() {
+gig() {
 	curl -fsSL "https://www.gitignore.io/api/$*"
 }
