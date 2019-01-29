@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# -*- coding: utf8 -*-
+# -*- coding: utf-8 -*-
 
 alias clear-all="clear && printf '\e[3J'"
 alias dir="ls -HAl"
@@ -10,50 +10,38 @@ alias vms="vboxmanage list runningvms"
 alias work="cd ~/Projects && tree -d -L 2"
 alias work\?="cd ~/Projects && uncommitted -nus * -I louis/sdmPythonWrapper/src/pysdm/lib"
 
+export CODE_BIN="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export JAVA_HOME="$HOME/.jabba/jdk/zulu@1.8.121/Contents/Home"
 export PS1="\\u@\\h:\\w\$ "
+export PYENV_ROOT="/usr/local/opt/pyenv"
+export REQUESTS_CA_BUNDLE="/usr/local/etc/openssl/cert.pem"
+export RUBY_DIR="/usr/local/opt/ruby"
+export RUBY_GEMDIR
+RUBY_GEMDIR="$("$RUBY_DIR/bin/gem" environment gemdir)"
+export VAGRANT_CWD="/Users/nathan.urwin/Projects/louis/ansible"
+export WHARF_DEV="true"
 
-# ruby
-export RUBY_DIR
-RUBY_DIR="$(brew --prefix ruby)"
+# PATH
+if [[ ! "$PATH" =~ "$CODE_BIN" ]]; then
+	export PATH="$PATH:$CODE_BIN"
+fi
+if [[ ! "$PATH" =~ "$JAVA_HOME" ]]; then
+	export PATH="$JAVA_HOME/bin:$PATH"
+fi
+if [[ ! "$PATH" =~ "$PYENV_ROOT/bin" ]]; then
+	export PATH="$PYENV_ROOT/bin:$PATH"
+fi
 if [[ ! "$PATH" =~ "$RUBY_DIR/bin" ]]; then
 	export PATH="$RUBY_DIR/bin:$PATH"
 fi
-
-# ruby gems
-export RUBY_GEMDIR
-RUBY_GEMDIR="$("$RUBY_DIR/bin/gem" environment gemdir)"
 if [[ ! "$PATH" =~ "$RUBY_GEMDIR/bin" ]]; then
 	export PATH="$RUBY_GEMDIR/bin:$PATH"
 fi
 
-# nvm
-export NVM_DIR
-NVM_DIR="$(brew --prefix nvm)"
-source "$NVM_DIR/nvm.sh"
-nvm use --delete-prefix lts/dubnium
-
-# python
-export PYENV_ROOT
-PYENV_ROOT="$(brew --prefix pyenv)"
-if [[ ! "$PATH" =~ "$PYENV_ROOT/bin" ]]; then
-	export PATH="$PYENV_ROOT/bin:$PATH"
-fi
+source "/usr/local/opt/nvm/nvm.sh"
+nvm use --delete-prefix lts/dubnium --silent
 eval "$(pyenv init -)"
-export REQUESTS_CA_BUNDLE="/usr/local/etc/openssl/cert.pem"
 
-# java
-export JAVA_HOME="$HOME/.jabba/jdk/zulu@1.8.121/Contents/Home"
-if [[ ! "$PATH" =~ "$JAVA_HOME" ]]; then
-	export PATH="$JAVA_HOME/bin:$PATH"
-fi
-
-# code
-export CODE_BIN="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-if [[ ! "$PATH" =~ "$CODE_BIN" ]]; then
-	export PATH="$PATH:$CODE_BIN"
-fi
-
-# .gitignore
 gig() {
 	curl -fsSL "https://www.gitignore.io/api/$*"
 }
