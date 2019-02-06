@@ -8,7 +8,7 @@ alias docker-rmi="docker rmi -f \$(docker images -f 'dangling=true' -q)"
 alias liferay="cd ~/Applications/liferay*/tom*/bin"
 alias vms="vboxmanage list runningvms"
 alias work="cd ~/Projects && tree -d -L 2"
-alias work\?="cd ~/Projects && uncommitted -nus * -I louis/sdmPythonWrapper/src/pysdm/lib"
+alias work\?="cd ~/Projects && uncommitted -nus * -I wharf_group"
 
 export CODE_BIN="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export JAVA_HOME="$HOME/.jabba/jdk/zulu@1.8.121/Contents/Home"
@@ -19,6 +19,8 @@ export RUBY_DIR="/usr/local/opt/ruby"
 export RUBY_GEMDIR
 RUBY_GEMDIR="$("$RUBY_DIR/bin/gem" environment gemdir)"
 export VAGRANT_CWD="/Users/nathan.urwin/Projects/louis/ansible"
+export PYSDM_DEV="true"
+export STERN_DEV="true"
 export WHARF_DEV="true"
 
 # PATH
