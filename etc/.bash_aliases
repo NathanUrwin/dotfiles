@@ -6,8 +6,16 @@
 # Actually clear the terminal alias.
 alias clearall="clear && printf '\e[3J'"
 
-# List directory alias (similar to Windows cmd.exe).
-alias dir="ls -HAl"
+# Color hidden bash files in home dir aliases.
+# Requires highlight (`brew install highlight`).
+alias cba="highlight ~/.bash_aliases"
+alias cbp="highlight ~/.bash_profile"
+alias cbr="highlight ~/.bashrc"
+alias clr="highlight"
+
+# List directory aliases (similar to Windows cmd.exe).
+alias dir="ls -AHl"
+alias lsl="ls -AHl"
 
 # Docker remove dangling images alias.
 alias dockrmi="docker rmi -f \$(docker images -f 'dangling=true' -q)"
@@ -23,9 +31,10 @@ alias ga="git add"
 alias gaa="git add --all"
 alias gc="git commit"
 alias gd="git --no-pager diff HEAD"
-alias gpl="git pull --rebase"
+alias gp="git pull"
+alias gpr="git pull --rebase"
 alias gps="git push"
-alias gpu="git push --set-upstream origin master"
+alias gpsu="git push --set-upstream origin"
 alias gs="git status"
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
@@ -36,6 +45,16 @@ alias liferay="cd ~/Applications/liferay*/tom*/bin"
 # Requires uncommitted (`brew install uncommitted`).
 alias modwork="cd ~/Modules && tree -d -L 2"
 alias modwork\?="cd ~/Modules && uncommitted -nus *"
+
+# Nano hidden bash files in home dir aliases.
+alias nba="nano ~/.bash_aliases"
+alias nbp="nano ~/.bash_profile"
+alias nbr="nano ~/.bashrc"
+
+# Source hidden bash files in home dir aliases.
+alias sba="source ~/.bash_profile"
+alias sbp="source ~/.bash_profile"
+alias sbr="source ~/.bash_profile"
 
 # List running virtual machines alias.
 alias vms="vboxmanage list runningvms"

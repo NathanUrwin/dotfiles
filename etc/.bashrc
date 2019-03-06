@@ -115,9 +115,3 @@ dockrun() {
 gig() {
 	curl -fsSL "https://www.gitignore.io/api/$*"
 }
-
-# Syntax-highlight code for copying and pasting.
-# Requires highlight (`brew install highlight`).
-pretty() {
-	pbpaste | highlight --syntax="$1" -O rtf | pbcopy
-}
