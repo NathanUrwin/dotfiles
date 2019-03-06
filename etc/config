@@ -1,0 +1,6 @@
+Host *
+  User Nathan.Urwin
+  AddKeysToAgent Yes
+  UseKeyChain Yes
+  IdentityFile ~/.ssh/id_rsa
+  IdentitiesOnly Yes
