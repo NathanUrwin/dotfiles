@@ -29,15 +29,18 @@ alias edi="curl -fsSL https://lgitlab.lon.compute.pgs.com/nathanurwin/dotfiles/r
 # Git aliases.
 alias ga="git add"
 alias gaa="git add --all"
+alias gb="git branch"
 alias gc="git commit"
 alias gcm="git commit --message"
-alias gd="git --no-pager diff HEAD"
+alias gd="git --no-pager diff"
+alias gdh="git --no-pager diff HEAD"
+alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias gp="git pull"
 alias gpr="git pull --rebase"
 alias gps="git push"
 alias gpsu="git push --set-upstream origin"
+alias gr="git remote -v"
 alias gs="git status"
-alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
 # Liferay Tomcat cd alias.
 alias liferay="cd ~/Applications/liferay*/tom*/bin"
