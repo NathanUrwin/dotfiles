@@ -39,7 +39,8 @@ alias gp="git pull"
 alias gpr="git pull --rebase"
 alias gps="git push"
 alias gpsu="git push --set-upstream origin"
-alias gr="git remote -v"
+alias gr="git remote"
+alias grv="git remote -v"
 alias gs="git status"
 
 # Liferay Tomcat cd alias.
@@ -66,4 +67,4 @@ alias vms="vboxmanage list runningvms"
 # ~/Projects tree and uncommitted aliases.
 # Requires uncommitted (`brew install uncommitted`).
 alias work="cd ~/Projects && tree -d -L 2"
-alias work\?="cd ~/Projects && uncommitted -nus * -I wharf_group"
+alias work\?="cd ~/Projects && uncommitted -nus *"
