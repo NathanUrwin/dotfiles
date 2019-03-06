@@ -13,6 +13,6 @@ indent_size = 4
 indent_style = space
 
 # See https://github.com/editorconfig/editorconfig/issues/239
-[{bin/*,.bash_profile}]
+[{*.sh,bin/*,etc/*}]
 indent_style = tab
 tab_width = 8
