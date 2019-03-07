@@ -4,7 +4,7 @@
 # See https://github.com/geerlingguy/dotfiles
 
 # Actually clear the terminal alias.
-alias clearall="clear && printf '\e[3J'"
+alias aclear="clear && printf '\e[3J'"
 
 # Color hidden bash files in home dir aliases.
 # Requires highlight (`brew install highlight`).
@@ -42,6 +42,7 @@ alias gpsu="git push --set-upstream origin"
 alias gr="git remote"
 alias grv="git remote -v"
 alias gs="git status"
+alias gst="git stash"
 
 # Liferay Tomcat cd alias.
 alias liferay="cd ~/Applications/liferay*/tom*/bin"
