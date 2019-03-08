@@ -30,6 +30,7 @@ alias edi="curl -fsSL https://lgitlab.lon.compute.pgs.com/nathanurwin/dotfiles/r
 alias ga="git add"
 alias gaa="git add --all"
 alias gb="git branch"
+alias gba="git branch --all"
 alias gc="git commit"
 alias gch="git checkout"
 alias gchb="git checkout -b"
