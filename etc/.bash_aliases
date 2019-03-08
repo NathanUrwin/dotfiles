@@ -36,6 +36,8 @@ alias gchb="git checkout -b"
 alias gcm="git commit --message"
 alias gd="git --no-pager diff"
 alias gdh="git --no-pager diff HEAD"
+alias gf="git fetch"
+alias gfa="git fetch --all"
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias gp="git pull"
 alias gpr="git pull --rebase"
