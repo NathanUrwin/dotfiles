@@ -8,4 +8,4 @@ My local configuration files saved here for convenience.
 - [.bash_profile](etc/.bash_profile)
 - [.bashrc](etc/.bashrc)
 - [.editorconfig](.editorconfig)
-- [hosts](etc/hosts)
+- [.ssh/config](etc/.ssh/config)
