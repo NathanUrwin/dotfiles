@@ -24,7 +24,7 @@ alias dockrmi="docker rmi -f \$(docker images -f 'dangling=true' -q)"
 alias dockviz="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz"
 
 # Download .editorconfig from PGS GitLab nathanurwin/dotfiles alias.
-alias edi="curl -fsSL https://lgitlab.lon.compute.pgs.com/nathanurwin/dotfiles/raw/master/.editorconfig -o .editorconfig"
+alias edi="curl -fsSL https://github.com/nathanurwin/dotfiles/raw/master/.editorconfig -o .editorconfig"
 
 # Git aliases.
 alias ga="git add"
