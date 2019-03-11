@@ -44,7 +44,7 @@ alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gp="git pull"
 alias gpr="git pull --rebase"
 alias gps="git push"
-alias gpsu="git push --set-upstream origin"
+alias gpsu="git push --set-upstream"
 alias gr="git remote"
 alias grb="git rebase"
 alias gre="git reset"
