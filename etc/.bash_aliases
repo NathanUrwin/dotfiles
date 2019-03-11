@@ -67,6 +67,9 @@ alias nba="nano ~/.bash_aliases"
 alias nbp="nano ~/.bash_profile"
 alias nbr="nano ~/.bashrc"
 
+# Update all pip packges alias.
+alias pipup="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
+
 # Source hidden bash files in home dir aliases.
 alias sba="source ~/.bash_profile"
 alias sbp="source ~/.bash_profile"
