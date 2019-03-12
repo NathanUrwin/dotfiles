@@ -59,8 +59,8 @@ alias liferay="cd ~/Applications/liferay*/tom*/bin"
 
 # ~/Modules tree and uncommitted aliases.
 # Requires uncommitted (`brew install uncommitted`).
-alias modwork="cd ~/Modules && tree -d -L 2"
-alias modwork\?="cd ~/Modules && uncommitted -nus *"
+alias mod="cd ~/Modules && tree -d -L 2"
+alias mod\?="cd ~/Modules && uncommitted -nus *"
 
 # Nano hidden bash files in home dir aliases.
 alias nba="nano ~/.bash_aliases"
