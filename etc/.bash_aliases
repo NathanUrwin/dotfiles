@@ -53,6 +53,11 @@ alias grm="git rm --cached -r ."
 alias grv="git remote -v"
 alias gs="git status"
 alias gst="git stash"
+alias gstd="git stash drop"
+alias gstl="git stash list"
+alias gstp="git stash push"
+alias gstpo="git stash pop"
+alias gsts="git stash show -p"
 
 # Liferay Tomcat cd alias.
 alias liferay="cd ~/Applications/liferay*/tom*/bin"
