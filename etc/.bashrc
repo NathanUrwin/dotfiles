@@ -124,5 +124,5 @@ gig() {
 }
 
 runlike() {
-	docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike "$1" | sed 's/--/\n--/g' | sed 's/^ //g'
+	docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike "$1" | sed 's/--/\\\n--/g' | sed 's/^ //g'
 }
