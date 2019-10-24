@@ -27,7 +27,7 @@ export PS1="\\u@\\h:\\w\$ "
 export PYENV_ROOT="/usr/local/opt/pyenv"
 
 # Set Requests Certificate Authority to brew installed OpenSSL.
-export REQUESTS_CA_BUNDLE="/usr/local/etc/openssl/cert.pem"
+# export REQUESTS_CA_BUNDLE="/usr/local/etc/openssl/cert.pem"
 
 # Set Ruby and Ruby Gems dirs.
 export RUBY_DIR="/usr/local/opt/ruby"
@@ -70,6 +70,13 @@ fi
 ###############################################################################
 # Source and eval                                                             #
 ###############################################################################
+
+# Setup gpg-agent.
+export GPG_TTY
+GPG_TTY=$(tty)
+if [ -z "$(pgrep gpg-agent)" ]; then
+    eval "$(gpg-agent --daemon)"
+fi
 
 # Turn on Git autocomplete.
 if [ -f /usr/local/etc/bash_completion ]; then
